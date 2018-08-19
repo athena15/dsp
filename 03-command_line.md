@@ -20,22 +20,44 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+Print working directory: **pwd**
+
+Create a directory: **mkdir** target_directory
+
+Delete a directory: **rm -r** target_directory
+
+Create a file: **touch** newfile.txt
+
+Delete a file: **rm** targetfile.txt
+
+List hidden files: **ls -a**
+
+Copy a file from one directory to another: **cp** target_file.txt \target_dir
+
+Copy *all* files from one directory to another: **cp *** /target_dir
+
+Delete *all* files from a directory: **rm -r** /target_dir
+
+Rename a file: **mv** oldname.txt newname.txt
+
+Print contents of a file to terminal: **cat** target_file.txt
+
+Print contents of a file to a different file: **cat** source_file.txt **>** target_file.txt
+
+Append contents of a file to a different file [retains original file data]: **cat** source_file.txt **>>** target_file.txt
 
 ---
 
 ### Q2.  List Files in Unix   
 
 What do the following commands do:  
-`ls`  
-`ls -a`  
-`ls -l`  
-`ls -lh`  
-`ls -lah`  
-`ls -t`  
-`ls -Glp`  
-
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+`ls`  : List all files and directories (in cwd)
+`ls -a`  : List all files and directories, *including hidden*
+`ls -l`  : List all files and directories, *in long format*
+`ls -lh`  : List all files and directories, *in long format,* **with readable file sizes**
+`ls -lah`  : Lists all files and directories, *in long format (l), showing hidden files (a), with more readable file sizes (h)*
+`ls -t`  : Lists all files and directories, *sorted by last modified*
+`ls -Glp`  Lists all files and directories, *adding colors for files & directories (G), in long format (l), *including  trailing '/' for directories*
 
 ---
 
@@ -43,7 +65,15 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+`ls -m` : Show all in comma separated notation
+
+`ls -F` : Flags filenames
+
+`ls -G` : Adds colors for filenames and directories
+
+`ls -d` : Displays only directories
+
+`ls -p | grep -v /` : Displays only files (not directories)
 
 ---
 
@@ -51,7 +81,7 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+`xargs` allows you to run Unix operations on multiple files. For example, you can use it to make new directories:
 
- 
+`dir1 dir2 dir3 | xargs mkdir`
 
