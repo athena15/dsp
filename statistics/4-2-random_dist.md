@@ -9,7 +9,7 @@ thinkplot.pmf(pmf, linewidth=.1, color='red')
 thinkplot.show(xlabel='Number', ylabel='PMF')
 ```
 
-![PMF Chart](/Users/brenner/dsp/statistics/output.png)
+![PMF Chart](output.png)
 
 ```python
 cdf = thinkstats2.Cdf(x)
@@ -19,4 +19,4 @@ thinkplot.Cdf(cdf, color='green')
 thinkplot.Show(xlabel = 'Number', ylabel = 'CDF')
 ```
 
-![CDF Chart](/Users/brenner/dsp/statistics/output2.png)
+![CDF Chart](output2.png)
