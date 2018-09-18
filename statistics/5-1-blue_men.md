@@ -7,6 +7,7 @@ In order to join Blue Man Group, you have to be male between 5’10” and 6’1
 ```python
 import scipy.stats
 
+# Average height is 178 cm (~ 5'11")
 mu = 178
 sigma = 7.7
 dist = scipy.stats.norm(loc=mu, scale=sigma)
