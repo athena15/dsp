@@ -1,6 +1,19 @@
 [Think Stats Chapter 6 Exercise 1](http://greenteapress.com/thinkstats2/html/thinkstats2007.html#toc60) (household income)
 
+**Importing modules, loading up the data set, and setting an upper bound on the sample.**
+
 ```python
+from __future__ import print_function, division
+
+%matplotlib inline
+
+import numpy as np
+
+import brfss
+
+import thinkstats2
+import thinkplot
+
 def InterpolateSample(df, log_upper=6.0):
     """Makes a sample of log10 household income.
 
@@ -35,9 +48,10 @@ return log_sample
 
 # Load the sample into dataframe
 sample = np.power(10, log_sample)
+```
+**Compute the median, mean, skewness and Pearson's skewness of the resulting sample.**
 
-# Solution!
-
+```Python
 median = np.median(sample)
 # 51226.93306562372
 
@@ -57,3 +71,14 @@ pearson_median_skewness(mean, median, std)
 # 0.7361105192428792
 ```
 
+**What fraction of households reports a taxable income below the mean?**
+
+```python
+cdf2.Prob(mean)
+# 0.660005879566872
+# 66.0% of households report a taxable income below the mean.
+```
+
+**How do the results depend on the assumed upper bound?**
+
+Removing the upper bound of $1,000,000 would increase the mean and cause the overall distribution to be even more positively skewed. With the mean going up, the percentage of households that make less than the mean is only bound to go up as well.
