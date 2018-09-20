@@ -33,28 +33,25 @@ for _, row in df.iterrows():
 log_sample = np.concatenate(arrays)
 return log_sample
 
-# Solution
+# Load the sample into dataframe
+sample = np.power(10, log_sample)
+
+# Solution!
 
 median = np.median(sample)
-median
-
 # 51226.93306562372
 
 mean = np.mean(sample)
-mean
-
 # 74278.7075311872
 
 std = np.std(sample)
-std
-
 # 93946.92996347835
-
-def pearson_median_skewness(mean, median, std):
-    return 3 * (mean - median) / std
 
 scipy.stats.skew(sample)
 # 4.949920244429584
+
+def pearson_median_skewness(mean, median, std):
+    return 3 * (mean - median) / std
 
 pearson_median_skewness(mean, median, std)
 # 0.7361105192428792
